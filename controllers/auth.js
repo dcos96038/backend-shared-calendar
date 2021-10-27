@@ -33,10 +33,10 @@ const createUser = async (req, res = response) => {
       token,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       ok: false,
       msg: 'Internal error',
+      error,
     });
   }
 };
@@ -74,10 +74,10 @@ const loginUser = async (req, res = response) => {
       token,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       ok: false,
       msg: 'Internal error',
+      error,
     });
   }
 };
